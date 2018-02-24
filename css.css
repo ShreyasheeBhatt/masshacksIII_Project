@@ -57,11 +57,30 @@ ul {
 }
 
 a {
+	overflow-wrap: break-word;
 	text-decoration: none;
 	color: #22272b;
 }
 
-#first  { left: 0%; position: relative; }
-#second { left: 10%; position: relative; }
-#third { left: 20%; position: relative; }
-#fourth  { left: 30%; position: relative; }
+#first  { 
+	left: 0%; 
+	position: relative; 
+	margin-bottom: 15px;
+}
+
+#second { 
+	left: 10%; 
+	position: relative; 
+	margin-bottom: 15px;
+}
+
+#third { 
+	left: 20%; 
+	position: relative; 
+	margin-bottom: 15px;
+	}
+
+#fourth  { 
+	left: 30%; 
+	position: relative; 
+}

@@ -8,22 +8,20 @@
 
 	<body>
 		<h1> ERQ </h1>
+		<h3> The Emergency Room Online Queue</h3>
 		<h2> Reason for Visit </h2>
 
 		<form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
-			<p> What is your problem? </p>
+			<div id="p2">
+				<p> What is your problem? Click on one of the following. </p>
 
-			<ul class= "reason" >
-				<li><a href="resp.html"> Respiratory </a></li>
-				<li><a href="pulm.html"> Pulmonary </a></li>
-				<li><a href="skel.html"> Skeletal/Muscular </a></li>
-				<li>
-					<p> 
-						Other:<br>
-						<input type="text" name="other"><br></li>
-					</p>
-						<button type="submit"><a href="other.html"> Submit </a></button>
-			</ul>
+				<ul>
+					<li><a href="resp.html" class= "reason" > Respiratory </a></li>
+					<li><a href="pulm.html" class= "reason" > Pulmonary </a></li>
+					<li><a href="skel.html" class= "reason" > Skeletal/Muscular </a></li>
+					<li><a href="other.html" class= "reason" > Other </a></li>
+				</ul>
+			</div>
 		</form>		
 
 		<script>

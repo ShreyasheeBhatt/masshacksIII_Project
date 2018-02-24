@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>ERQ</title>
 	</head>
 
@@ -31,7 +32,7 @@
 				<p><label> <input type="checkbox" name="Medical"> Pulmonary Hypertension </label></p>
 				<p><label> <input type="checkbox" name="Medical"> ARDS </label></p>
 				<p><label> <input type="checkbox" name="Medical"> Pneumonia </label></p>
-				<p><label> <input type="checkbox" name="Medical"> Respiratory Allergic Reaction </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Pulmonary Allergic Reaction </label></p>
 				<p><label> <input type="checkbox" name="Medical"> Currently taking medication with risk of repiratory response </label></p>
 			</fieldset>
 
@@ -74,6 +75,20 @@
 				</label> 
 			</p>
 		</form>		
-		<button type="submit"><a href="other.html"> Submit </a></button>
+		<button type="submit"><a href="thanks.html"> Submit </a></button>
 	</body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+    authDomain: "erq-masshacks.firebaseapp.com",
+    databaseURL: "https://erq-masshacks.firebaseio.com",
+    projectId: "erq-masshacks",
+    storageBucket: "",
+    messagingSenderId: "556678593365"
+  };
+  firebase.initializeApp(config);
+</script>

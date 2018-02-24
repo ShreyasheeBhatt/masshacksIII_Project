@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>ERQ</title>
 	</head>
 
@@ -9,14 +10,20 @@
 
 		<form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
 
+			<!-- https://www.onhealth.com/content/1/respiratory_infections_causes -->
 			<fieldset>
 				<legend> Symptoms </legend>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Sneezing </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Runny Nose </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Stuffy Nose </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Fever </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Cough </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Sore Throat </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Malaise/Fatigue </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Headache </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Chills </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Muscle/Joint Pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Vomiting and/or diarrhea </label></p>
 			</fieldset>
 
 			<p></p>
@@ -24,14 +31,9 @@
 
 			<fieldset>
 				<legend> Medical Information/History </legend>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Up to date with immunizations </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Respiratory Allergic Reaction </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Currently taking medication with risk of repiratory response </label>
 			</fieldset>
 
 			<p></p>
@@ -73,6 +75,20 @@
 				</label> 
 			</p>
 		</form>	
-		<button type="submit"><a href="other.html"> Submit </a></button>	
+		<button type="submit"><a href="thanks.html"> Submit </a></button>	
 	</body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+    authDomain: "erq-masshacks.firebaseapp.com",
+    databaseURL: "https://erq-masshacks.firebaseio.com",
+    projectId: "erq-masshacks",
+    storageBucket: "",
+    messagingSenderId: "556678593365"
+  };
+  firebase.initializeApp(config);
+</script>

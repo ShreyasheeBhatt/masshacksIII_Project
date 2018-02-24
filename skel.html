@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>ERQ</title>
 	</head>
 
@@ -9,32 +10,47 @@
 
 		<form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
 
-			// http://enw.org/Can'tBreathe.htm
+			<!-- https://www.elastoplast.com.au/injury-advice/muscle-and-joint-pain/common-joint-and-muscle-injuries -->
 			<fieldset>
 				<legend> Symptoms </legend>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
-				<p><label> <input type="checkbox" name="Symptoms">  </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Joint pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Inflammation </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Redness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Stiffness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Weakness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Instability </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Reduced range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Swelling </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Pain with range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> No muscle endurance </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Unstable joints </label></p>
 			</fieldset>
 
 			<p></p>
 			<p></p>
 
-			// https://www.webmd.com/lung/lung-diseases-overview#1
+			
 			<fieldset>
 				<legend> Medical Information/History </legend>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
-				<p><label> <input type="checkbox" name="Medical">  </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in a similar way </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in same spot </label></p>
 			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<fieldset>
+				Area of Concern (eg. "left ankle" or "right wrist"): <br>
+					<input type="text" name="concern" required><br>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<fieldset>
+				Potential Cause (eg. "I was playing basketball":<br>
+					<input type="text" name="cause" required><br>
+            </fieldset>
 
 			<p></p>
 			<p></p>
@@ -75,6 +91,20 @@
 				</label> 
 			</p>
 		</form>	
-		<button type="submit"><a href="other.html"> Submit </a></button>	
+		<button type="submit"><a href="thanks.html"> Submit </a></button>	
 	</body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+    authDomain: "erq-masshacks.firebaseapp.com",
+    databaseURL: "https://erq-masshacks.firebaseio.com",
+    projectId: "erq-masshacks",
+    storageBucket: "",
+    messagingSenderId: "556678593365"
+  };
+  firebase.initializeApp(config);
+</script>

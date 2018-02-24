@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>ERQ</title>
 	</head>
 
@@ -13,9 +14,7 @@
 			<ul class= "reason" >
 				<li><a href="resp.html"> Respiratory </a></li>
 				<li><a href="pulm.html"> Pulmonary </a></li>
-				<li><a href="skel.html"> Skeletal </a></li>
-				<li><a href="musc.html"> Muscular </a></li>
-				<li><a href="seasill.html"> Seasonal Illness </a></li>
+				<li><a href="skel.html"> Skeletal/Muscular </a></li>
 				<li>
 					<p> 
 						Other:<br>
@@ -27,3 +26,17 @@
 		</form>		
 	</body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+    authDomain: "erq-masshacks.firebaseapp.com",
+    databaseURL: "https://erq-masshacks.firebaseio.com",
+    projectId: "erq-masshacks",
+    storageBucket: "",
+    messagingSenderId: "556678593365"
+  };
+  firebase.initializeApp(config);
+</script>

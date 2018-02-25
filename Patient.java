@@ -1,14 +1,15 @@
 import java.util.HashMap;
+
 public class Patient {
 	//Data
 	private String name;
 	private String phonenumber;
-	private int age;
+	private String age;
 	private HashMap <String, Symptom> symptoms;
 	private int ID;
 	private int triage;
 	private double time;
-	private QueueID queueID;
+	private double urgency;
 	//Constructor
 	/*
 	 * Empty constructor
@@ -19,17 +20,19 @@ public class Patient {
 	/*
 	 * Constructor with name_in field and phonenumber_in field
 	 */
-	public Patient (String name_in, int ID_in, int triage_in, String phonenumber_in, int age_in, HashMap <String, Symptom> symptoms_in) {
+	public Patient (String name_in, int ID_in, int triage_in, String phonenumber_in, String age_in, HashMap <String, Symptom> symptoms_in, double time_in, int queueposition) {
 		name = name_in;
 		ID = ID_in;
 		phonenumber = phonenumber_in;
 		age = age_in;
 		symptoms = symptoms_in;
+		time_in = time;
 	}
-	public Patient (String name_in, int ID_in, int triage_in) {
+	public Patient (String name_in, int ID_in, int triage_in, double time_in) {
 		name = name_in;
 		ID = ID_in;
 		triage = triage_in;
+		time_in = time;
 		}
 	
 	//Methods
@@ -50,11 +53,11 @@ public class Patient {
 		return phonenumber;
 	}
 	
-	public int getAge () {
+	public String getAge () {
 		return age;
 	}
 	
-	public void setAge (int age_in) {
+	public void setAge (String age_in) {
 		age = age_in;
 	}
 	
@@ -91,13 +94,10 @@ public class Patient {
 		return time;
 	}
 	
-	public void setQueueID () {
-		queueID.setID(getID());
-		queueID.setTriage(getTriage());
-	}
-	public QueueID getQueueID () {
-		setQueueID();
-		return queueID;
+	public double getUrgency () {
+		double z = (getTime())/(90);
+		double urgency = 4*(0.8*(5-getTriage()) + 0.2*(z*5));
+		return urgency;
 	}
 	
 }

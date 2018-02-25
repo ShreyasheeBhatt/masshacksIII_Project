@@ -4,6 +4,8 @@ public class Symptom {
 	private int intensity;
 	private String category;
 	private String history;
+	private String areaofconcern;
+	private String potentialcause;
 //Constructor
 	/*
 	 * Empty Constructor
@@ -49,4 +51,18 @@ public class Symptom {
 		return history;
 	}
 	
+	public void setareaofconcern (String areaofconcern_in) {
+		areaofconcern = areaofconcern_in;
+	}
+	
+	public String getareaofconcern () {
+		return areaofconcern;
+	}
+	public void setpotentialcause (String potentialcause_in) {
+		potentialcause = potentialcause_in;
+	}
+	
+	public String getpotentialcause () {
+		return potentialcause;
+	}
 }

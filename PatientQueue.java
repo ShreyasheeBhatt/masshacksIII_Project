@@ -6,8 +6,8 @@ public class PatientQueue {
 	private ArrayList <Patient> sortedqueue;
 	//Constructors
 	public PatientQueue () {
-		queue = new ArrayList<Patient> ();
-		sortedqueue = new ArrayList<Patient>();
+		queue = new ArrayList <Patient> ();
+		sortedqueue = new ArrayList <Patient> ();
 	}
 	//Methods	
 	public void addPatient (Patient patient_in) {
@@ -18,18 +18,10 @@ public class PatientQueue {
 	}
 	
 	public void sortPatients () {
-		/**Set set = queue.entrySet();
-		Iterator i = set.iterator();
-		while (i.hasNext()) {
-			Map.Entry current = (Map.Entry)i.next();
-			sortedqueue.add(queue.get(current));
-		}
-		
-		**/
 			sortedqueue.clear();
-			for (int i=1;i<=5;i++) {
+			for (int i=20;i<=1;i--) {
 				for (int j=0;j<queue.size();j++) {
-					if (queue.get(j).getTriage()==i) {
+					if ((int) queue.get(j).getUrgency()==i) {
 					sortedqueue.add(queue.get(j));
 					}
 			}

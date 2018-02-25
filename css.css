@@ -57,12 +57,11 @@ label {
 }
 
 a {
-	overflow-wrap: break-word;
 	text-decoration: none;
 	color: #22272b;
 }
 
-#first  { 
+/*#first  { 
 	left: 0%; 
 	position: relative; 
 	margin-bottom: 15px;
@@ -83,4 +82,11 @@ a {
 #fourth  { 
 	left: 30%; 
 	position: relative; 
+}*/
+
+button {
+	align-self: center;
+	font-size: 25px;
+	margin-bottom: 50px;
+	text-align: center;
 }

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ERQ</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body>
+		<h1> ERQ </h1>
+		<h3> The Emergency Room Online Queue</h3>
+		<h2> Welcome </h2>
+
+		<p> Welcome to the Emergency Room Online Queue. Fill in the information below to begin your form. </p>
+
+		<form id = "intro">
+			First name:<br>
+				<input type="text" name="firstname" id="firstname" required><br>
+
+			<p></p>
+			<p></p>
+			
+			Last name:<br>
+				<input type="text" name="lastname" id="lastname" required><br>
+
+			<p></p>
+			<p></p>
+			
+			Phone Number: <br>
+            			<input type="text" name="phone" id="phone">
+
+            <p></p>
+			<p></p>
+
+			<div id="p2">
+				<p> What is your problem? Click on one of the following four options or simply scroll down. </p>
+
+				<ul>
+					<button id="first" ><a href="#Respiratory" class = "reason"> Respiratory </a></button>
+					<button id="third" ><a href="#Circulatory" class= "reason"> Circulatory </a></button>
+					<button id="third" ><a href="#Skeletal" class= "reason"> Skeletal/Muscular </a></button>
+					<button id="fourth" ><a href="#Other" class= "reason"> Other </a></button>
+				</ul>
+			</div>
+
+		<p></p>
+		<p></p>
+
+		<!-- https://www.onhealth.com/content/1/respiratory_infections_causes -->
+			<!--http://enw.org/Can'tBreathe.htm-->
+		<div id="Respiratory">
+			<h2>Respiratory</h2>
+			<fieldset>
+				<legend> Symptoms </legend>
+				<p><label> <input type="checkbox" name="Symptoms" id="sneezing"> Sneezing </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="runnyNose"> Runny Nose </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="stuffyNose"> Stuffy Nose </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id = "fever"> Fever </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Cough </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Sore Throat </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Malaise/Fatigue </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Headache </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Chills </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Muscle/Joint Pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Vomiting and/or diarrhea </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Unable to breathe/limited breathing </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Difficulty speaking </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Shaking </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Dizziness/Headache </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Tingling or swelling in the body </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Fever or weakness </label></p>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+
+			<!--https://www.webmd.com/lung/lung-diseases-overview#1-->
+			<fieldset>
+				<legend> Medical Information/History </legend>
+				<p><label> <input type="checkbox" name="Medical"> Up to date with immunizations </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Respiratory Allergic Reaction </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Currently taking medication with risk of repiratory response </label>
+				<p><label> <input type="checkbox" name="Medical"> Asthmatic </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Tuberculosis </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Cystic Fibrosis </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Pulmonary Hypertension </label></p>
+				<p><label> <input type="checkbox" name="Medical"> ARDS </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Pneumonia </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Currently taking medication with risk of repiratory response </label>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Intensity
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="number" > 1 </option>
+					<option value="number" > 2 </option>
+					<option value="number" > 3 </option>
+					<option value="number" > 4 </option>
+					<option value="number" > 5 </option>
+					<option value="number" > 6 </option>
+					<option value="number" > 7 </option>
+					<option value="number" > 8 </option>
+					<option value="number" > 9 </option>
+					<option value="number" > 10 </option>
+				</select>
+				</label> 
+			</p>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Age
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="age" > 1-10 </option>
+					<option value="age" > 11-17 </option>
+					<option value="age" > 18-29 </option>
+					<option value="age" > 20-39 </option>
+					<option value="age" > 40-49 </option>
+					<option value="age" > 50-65 </option>
+					<option value="age" > 66+ </option>
+				</select>
+				</label> 
+			</p>
+			<button type="submit"><a href="thanks.html"> Submit </a></button>
+		</div>
+
+
+		<div id="Circulatory">
+			<h2>Circulatory</h2>
+			<!--https://www.healthline.com/health/circulatory-system-diseases#heart-attacks-->
+			<!--https://www.belmarrahealth.com/causes-of-circulatory-system-diseases/-->
+			<fieldset>
+				<legend> Symptoms </legend>
+				<p><label> <input type="checkbox" name="Symptoms"> Chest pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Heavy sensation in chest </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> pain in the center or left side of the chest that feels like mild or severe discomfort </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Pressure </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Fullness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Squeezing pain that radiates fom the jaw, shoulder, arm, or across the back </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Shortness of breath </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Sweating </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Nausea </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Irregular Heartbeat </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Unconciousness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Fatigue </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Ankle swelling (edema) </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Rapid breathing </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Loss of consciousness </label></p>
+			<p></p>
+			<p></p>
+
+			<fieldset>
+				<legend> Medical Information/History </legend>
+				<p><label> <input type="checkbox" name="Medical"> High Blood Pressure </label></p>
+				<p><label> <input type="checkbox" name="Medical"> History of Heart Attack in Family </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Prior experience/hospitalization regarding heart attack/stroke </label>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Intensity
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="number" > 1 </option>
+					<option value="number" > 2 </option>
+					<option value="number" > 3 </option>
+					<option value="number" > 4 </option>
+					<option value="number" > 5 </option>
+					<option value="number" > 6 </option>
+					<option value="number" > 7 </option>
+					<option value="number" > 8 </option>
+					<option value="number" > 9 </option>
+					<option value="number" > 10 </option>
+				</select>
+				</label> 
+			</p>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Age
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="age" > 1-10 </option>
+					<option value="age" > 11-17 </option>
+					<option value="age" > 18-29 </option>
+					<option value="age" > 20-39 </option>
+					<option value="age" > 40-49 </option>
+					<option value="age" > 50-65 </option>
+					<option value="age" > 66+ </option>
+				</select>
+				</label> 
+			</p>
+			<button type="submit"><a href="thanks.html"> Submit </a></button>
+		</div>
+
+
+		<div id="Skeletal">
+			<h2>Skeletal/Muscular</h2>
+			<!-- https://www.elastoplast.com.au/injury-advice/muscle-and-joint-pain/common-joint-and-muscle-injuries -->
+			<fieldset>
+				<legend> Symptoms </legend>
+				<p><label> <input type="checkbox" name="Symptoms"> Joint pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Inflammation </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Redness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Stiffness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Weakness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Instability </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Reduced range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Swelling </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Pain with range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> No muscle endurance </label></p>
+				<p><label> <input type="checkbox" name="Symptoms"> Unstable joints </label></p>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+
+			
+			<fieldset>
+				<legend> Medical Information/History </legend>
+				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in a similar way </label></p>
+				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in same spot </label></p>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<fieldset>
+				Area of Concern (eg. "left ankle" or "right wrist"): <br>
+					<input type="text" name="concern" required><br>
+			</fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<fieldset>
+				Potential Cause (eg. "I was playing basketball":<br>
+					<input type="text" name="cause" required><br>
+            </fieldset>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Intensity
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="number" > 1 </option>
+					<option value="number" > 2 </option>
+					<option value="number" > 3 </option>
+					<option value="number" > 4 </option>
+					<option value="number" > 5 </option>
+					<option value="number" > 6 </option>
+					<option value="number" > 7 </option>
+					<option value="number" > 8 </option>
+					<option value="number" > 9 </option>
+					<option value="number" > 10 </option>
+				</select>
+				</label> 
+			</p>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Age
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="age" > 1-10 </option>
+					<option value="age" > 11-17 </option>
+					<option value="age" > 18-29 </option>
+					<option value="age" > 20-39 </option>
+					<option value="age" > 40-49 </option>
+					<option value="age" > 50-65 </option>
+					<option value="age" > 66+ </option>
+				</select>
+				</label> 
+			</p>
+			<button type="submit"><a href="thanks.html"> Submit </a></button>
+		</div>
+
+		<div id="Other">
+			<h2>Other Reasons: </h2>
+
+			Please describe your symptoms below:<br>
+				<input type="text" name="firstname" id="firstname" required><br>
+				
+				<p></p>
+				<p></p>
+
+			Please inform us of any relevant medical information (eg. relevant perscriptions or similar past experiences):<br>
+				<input type="text" name="lastname" id="lastname" required><br>
+			<p>
+
+				<label>Intensity
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="number" > 1 </option>
+					<option value="number" > 2 </option>
+					<option value="number" > 3 </option>
+					<option value="number" > 4 </option>
+					<option value="number" > 5 </option>
+					<option value="number" > 6 </option>
+					<option value="number" > 7 </option>
+					<option value="number" > 8 </option>
+					<option value="number" > 9 </option>
+					<option value="number" > 10 </option>
+				</select>
+				</label> 
+			</p>
+
+			<p></p>
+			<p></p>
+			
+			<p>
+				<label>Age
+				<select id="choice" name="Intensity">
+					<option value="" selected="selected"> Select One </option>
+					<option value="age" > 1-10 </option>
+					<option value="age" > 11-17 </option>
+					<option value="age" > 18-29 </option>
+					<option value="age" > 20-39 </option>
+					<option value="age" > 40-49 </option>
+					<option value="age" > 50-65 </option>
+					<option value="age" > 66+ </option>
+				</select>
+				</label> 
+			</p>
+			<button type="submit"><a href="thanks.html"> Submit </a></button>
+		</div>
+	</form>
+
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+		    authDomain: "erq-masshacks.firebaseapp.com",
+		    databaseURL: "https://erq-masshacks.firebaseio.com",
+		    projectId: "erq-masshacks",
+		    storageBucket: "",
+		    messagingSenderId: "556678593365"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+	</body>
+</html>

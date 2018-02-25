@@ -11,56 +11,78 @@ var config = {
     messagingSenderId: "556678593365"
   };
 
-
-//Initialize your Firebase app
 firebase.initializeApp(config);
 
-//Reference to the recommendations object in your Firebase database
-var recommendations = firebase.database().ref("recommendations");
+var Forms = firebase.database().ref("IndexResponse");
 
-//Save a new recommendation to the database, using the input in the form
-var submitRecommendation = function () {
+var submitForm = function () {
 
-// Get input values from each of the form elements
-var firstname = $("#talkTitle").val();
-var lastname = $("#talkPresenter").val();
-var phone = $("#talkLink").val();
+var firstname = $("#firstName").val();
+var lastname = $("#lastName").val();
+var phone = $("#phoneNumber").val();
+var sneezing = $("#sneezing").val();
+var runnyNose = $("#runnyNose").val();
+var stuffyNose = $("#stuffyNose").val();
+var cough = $("#cough").val();
+var soreThroat = $("#soreThroat").val();
+var fever = $("#fever").val();
+var fatigue1 = $("#fatigue1").val();
+var fatigue2 = $("#fatigue2").val();
+var headache = $("#headache").val();
+var chills = $("#chills").val();
+var musclePain = $("#musclePain").val();
+var vomiting = $("#vomiting").val();
+var breathing = $("#breathing").val();
+var difficultySpeaking = $("#difficultySpeaking").val();
+var shaking = $("#shaking").val();
+var dizziness = $("#dizziness").val();
+var tingling = $("#tingling").val();
+var fever1 = $("#fever1").val();
+var immunizations = $("#immunizations").val();
+var respiratoryAllergy = $("#respiratoryAllergy").val();
+var medication = $("#medication").val();
+var asthma = $("#asthma").val();
+var tuberculosis = $("#tuberculosis").val();
+var cysticFibrosis = $("#cysticFibrosis").val();
+var pulmonaryHypertension = $("#pulmonaryHypertension").val();
+var ards = $("#ards").val();
+var pneumonia = $("#pneumonia").val();
+var x = $("#phoneNumber").val();
+var y = $("#sneezing").val();*/
 
-// Push a new recommendation to the database using those values
-recommendations.push({
+Forms.push({
  "first-name": firstname,
  "last-name": lastname,
  "phone": phone
+ "sneezing": sneezing,
+ "runnyNose": runnyNose,
+ "stuffyNose": stuffyNose,
+ "cough": cough,
+ "soreThroat": soreThroat,
+ "fever": "fever",
+ "fatigue1": fatigue1,
+ "fatigue2": fatigue2,
+ "headache": headache,
+ "chills": chills,
+ "musclePain": musclePain,
+ "vomiting": vomiting,
+ "breathing":breathing,
+ "difficultySpeaking": difficultySpeaking
 });
 };
 
-//Get the single most recent recommendation from the database and
-//update the table with its values. This is called every time the child_added
-//event is triggered on the recommendations Firebase reference, which means
-//that this will update EVEN IF you don't refresh the page. Magic.
-recommendations.limitToLast(1).on('child_added', function(childSnapshot) {
-// Get the recommendation data from the most recent snapshot of data
-// added to the recommendations list in Firebase
-recommendation = childSnapshot.val();
 
-// Update the HTML to display the recommendation text
-$("#title").html(recommendation.title)
-$("#presenter").html(recommendation.presenter)
-$("#link").html(recommendation.link)
+Forms.limitToLast(1).on('child_added', function(childSnapshot) {
 
-// Make the link actually work and direct to the URL provided
-$("#link").attr("href", recommendation.link)
+form = childSnapshot.val();
+
+$("#link").attr("href", form.link)
 });
 
-//When the window is fully loaded, call this function.
-//Note: because we are attaching an event listener to a particular HTML element
-//in this function, we can't do that until the HTML element in question has
-//been loaded. Otherwise, we're attaching our listener to nothing, and no code
-//will run when the submit button is clicked.
 $(window).load(function () {
 
-// Find the HTML element with the id recommendationForm, and when the submit
-// event is triggered on that element, call submitRecommendation.
-$("#recommendationForm").submit(submitRecommendation);
+$("#recommendationForm").submit(submitForm);
 
 });
+
+

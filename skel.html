@@ -16,17 +16,17 @@
 			<!-- https://www.elastoplast.com.au/injury-advice/muscle-and-joint-pain/common-joint-and-muscle-injuries -->
 			<fieldset>
 				<legend> Symptoms </legend>
-				<p><label> <input type="checkbox" name="Symptoms"> Joint pain </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Inflammation </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Redness </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Stiffness </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Weakness </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Instability </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Reduced range of motion </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Swelling </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Pain with range of motion </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> No muscle endurance </label></p>
-				<p><label> <input type="checkbox" name="Symptoms"> Unstable joints </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="jointPain"> Joint pain </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="inflammation"> Inflammation </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="redness"> Redness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="stiffness"> Stiffness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="weakness"> Weakness </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="instability"> Instability </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="reducedMotion"> Reduced range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="swelling"> Swelling </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="painMotion"> Pain with range of motion </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="muscleEndurance"> No muscle endurance </label></p>
+				<p><label> <input type="checkbox" name="Symptoms" id="unstableJoints"> Unstable joints </label></p>
 			</fieldset>
 
 			<p></p>
@@ -35,8 +35,8 @@
 			
 			<fieldset>
 				<legend> Medical Information/History </legend>
-				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in a similar way </label></p>
-				<p><label> <input type="checkbox" name="Medical"> Broken/injured before in same spot </label></p>
+				<p><label> <input type="checkbox" name="Medical" id="brokenSimilar"> Broken/injured before in a similar way </label></p>
+				<p><label> <input type="checkbox" name="Medical" id="brokenSame"> Broken/injured before in same spot </label></p>
 			</fieldset>
 
 			<p></p>
@@ -44,7 +44,7 @@
 			
 			<fieldset>
 				Area of Concern (eg. "left ankle" or "right wrist"): <br>
-					<input type="text" name="concern" required><br>
+					<input type="text" name="concern" id="areaConcern" required><br>
 			</fieldset>
 
 			<p></p>
@@ -52,7 +52,7 @@
 			
 			<fieldset>
 				Potential Cause (eg. "I was playing basketball":<br>
-					<input type="text" name="cause" required><br>
+					<input type="text" name="cause" id="potentialCause" required><br>
             </fieldset>
 
 			<p></p>
@@ -62,16 +62,16 @@
 				<label>Intensity
 				<select id="choice" name="Intensity">
 					<option value="" selected="selected"> Select One </option>
-					<option value="number" > 1 </option>
-					<option value="number" > 2 </option>
-					<option value="number" > 3 </option>
-					<option value="number" > 4 </option>
-					<option value="number" > 5 </option>
-					<option value="number" > 6 </option>
-					<option value="number" > 7 </option>
-					<option value="number" > 8 </option>
-					<option value="number" > 9 </option>
-					<option value="number" > 10 </option>
+					<option value="number" id="1"> 1 </option>
+					<option value="number" id="2"> 2 </option>
+					<option value="number" id="3"> 3 </option>
+					<option value="number" id="4"> 4 </option>
+					<option value="number" id="5"> 5 </option>
+					<option value="number" id="6"> 6 </option>
+					<option value="number" id="7"> 7 </option>
+					<option value="number" id="8"> 8 </option>
+					<option value="number" id="9"> 9 </option>
+					<option value="number" id="10"> 10 </option>
 				</select>
 				</label> 
 			</p>

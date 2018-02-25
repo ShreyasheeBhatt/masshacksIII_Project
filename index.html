@@ -1,42 +1,50 @@
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <!-- Load the Firebase library before loading the body. -->
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>ERQ</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body>
+		<h1> ERQ </h1>
+		<h3> The Emergency Room Online Queue</h3>
+		<h2> Welcome </h2>
 
-    <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<p> Welcome to the Emergency Room Online Queue. Fill in the information below to begin your form. </p>
 
-    <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  </head>
+		<form id = "intro">
+			First name:<br>
+				<input type="text" name="firstname" id="firstname" required><br>
 
-  <body>
-    <!-- Load the application script, which will save data to our Firebase app when we click the button. -->
-    <script src="application.js"></script>
+			<p></p>
+			<p></p>
+			
+			Last name:<br>
+				<input type="text" name="lastname" id="lastname" required><br>
 
-    <div class="container">
-      <h1>Emergency Response Queue</h1>
+			<p></p>
+			<p></p>
+			
+			Phone Number: <br>
+            			<input type="text" name="phone" id="phone">
+		</form>
 
-      <form id="recommendationForm">
-        <div class="form-group">
-          <label for="talkTitle">First Name</label>
-          <input class="form-control" id="talkTitle">
-        </div>
+		<p></p>
+		<p></p>
 
-        <div class="form-group">
-          <label for="talkPresenter">Last Name</label>
-          <input class="form-control" id="talkPresenter">
-        </div>
+		<button type="submit"><a href="page2.html"> Submit </a></button>
 
-        <div class="form-group">
-          <label for="talkLink">Phone Number</label>
-          <input class="form-control" id="talkLink">
-        </div>
-
-        <!-- When you click this button, trigger the submit event on this form. -->
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-  </body>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAW-kLlA4tISaH5bpNQ3-3NZoZ2T7DGjA8",
+		    authDomain: "erq-masshacks.firebaseapp.com",
+		    databaseURL: "https://erq-masshacks.firebaseio.com",
+		    projectId: "erq-masshacks",
+		    storageBucket: "",
+		    messagingSenderId: "556678593365"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+	</body>
 </html>
